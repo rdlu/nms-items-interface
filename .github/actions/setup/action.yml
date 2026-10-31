@@ -14,7 +14,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: astral-sh/setup-uv@v10.3.1
+    - uses: astral-sh/setup-uv@v10.3.3
     # node through mise, so CI runs the version mise.toml names and a bump
     # there is the only edit. Only node: typst and the rest are not needed
     # here. The same node runs the web cross-checks in test_web.py.
