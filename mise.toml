@@ -29,7 +29,7 @@ node = "24"
 # of which needed a new one; on build 180836 (7.06) it decompiles every table
 # byte-for-byte the same as the v7.07.0-pre1 pre-release.
 [tools."github:monkeyman192/MBINCompiler"]
-version = "v7.04.1-pre3"
+version = "v7.14.0-pre1"
 asset_pattern = "MBINCompiler-linux"
 bin = "MBINCompiler"
 format = "raw"

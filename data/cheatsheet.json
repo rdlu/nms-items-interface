@@ -4,7 +4,7 @@
   "cook": 1323,
   "items": 697
  },
- "game": "Cosmos 7.06, build 180836",
+ "game": "Forsaken 7.14, build 185034",
  "loops": [
   {
    "make": "6 Condensed Carbon",
@@ -2448,11 +2448,24 @@
     "where": "Lands at the space station; system and ship name not shown in the clip",
     "source": "The Game Hub, youtube.com/shorts/mzRZu53WGoI (2026-07-27)",
     "added": "2026-10-07"
+   },
+   {
+    "name": "\u03b8-Remnant",
+    "code": "6163079DAE60",
+    "grouped": "6 163 07 9DA E60",
+    "galactic": "065F:0086:01D9:0163",
+    "kind": "starship",
+    "origin": "shared",
+    "galaxy": "1. Euclid",
+    "detail": "Black and teal 'X-wing' Sentinel interceptor, S-class as found; 3+1 supercharged slots",
+    "where": "Landed at -22.84 / -166.37",
+    "source": "The Game Hub, youtube.com/shorts/1vx3Rkuplm0 (2026-08-28) - @rdlu via #27",
+    "added": "2026-10-21"
    }
   ],
   "counts": {
    "mine": 0,
-   "shared": 18
+   "shared": 19
   }
  },
  "tier0": [
@@ -2505,7 +2518,6 @@
   "Activated Indium",
   "Atlantideum",
   "Comet Dust",
-  "Contaminated Metal",
   "Corrupted Ichor",
   "Crystal Sulphide",
   "Cursed Dust",
@@ -2519,6 +2531,7 @@
   "Hypnotic Eye",
   "Inverted Mirror",
   "Iridesite",
+  "Isotopic Dust",
   "Larval Core",
   "Living Pearl",
   "Polished Stone",
