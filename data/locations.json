@@ -210,6 +210,17 @@
    "where": "Lands at the space station; system and ship name not shown in the clip",
    "source": "The Game Hub, youtube.com/shorts/mzRZu53WGoI (2026-07-27)",
    "added": "2026-10-07"
+  },
+  {
+   "name": "θ-Remnant",
+   "code": "6163079DAE60",
+   "kind": "starship",
+   "origin": "shared",
+   "galaxy": 1,
+   "detail": "Black and teal 'X-wing' Sentinel interceptor, S-class as found; 3+1 supercharged slots",
+   "where": "Landed at -22.84 / -166.37",
+   "source": "The Game Hub, youtube.com/shorts/1vx3Rkuplm0 (2026-08-28) - @rdlu via #27",
+   "added": "2026-10-21"
   }
  ],
  "_trash": []

@@ -1,0 +1,43 @@
+# Turn on auto-merge for Dependabot's patch updates, in every ecosystem it
+# watches (the npm site build, the uv lock, the workflows' actions), so a patch
+# release lands on its own once the required `check` from ci.yml passes. Minor
+# and major updates still wait for a human. For a grouped pull request
+# fetch-metadata reports the highest update type in the group, so one minor
+# bump among patches keeps the whole group waiting too.
+#
+# The pattern from GitHub's Dependabot docs: plain `pull_request`, where a
+# Dependabot run gets a read-only token plus the permissions declared here and
+# no secrets; `pull_request_target` is not needed. The job only enables
+# auto-merge; the merge itself waits on main's ruleset, which allows merge
+# commits and rebases, so it is `--merge`.
+#
+# Known caveat: a merge done by auto-merge that was enabled with GITHUB_TOKEN
+# does not trigger push workflows, so pages.yml does not deploy these merges.
+# That is acceptable: the npm packages are build tooling only, and the next
+# human merge or `mise run deploy` redeploys with them; the Python deps are
+# not deployed at all.
+name: Dependabot auto-merge
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'rdlu/nms-items-interface'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - id: metadata
+        uses: dependabot/fetch-metadata@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --auto --merge "$PR_URL"

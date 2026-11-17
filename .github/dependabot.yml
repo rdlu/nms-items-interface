@@ -1,10 +1,10 @@
-# Weekly pull requests for what is behind: the site's npm packages, and the
-# actions the workflows use (setup-uv is pinned to an exact release, as it
-# publishes no moving major tag, so this is what moves it).
+# Weekly pull requests for what is behind: the site's npm packages, the Python
+# side (uv.lock), and the actions the workflows use (setup-uv is pinned to an
+# exact release, as it publishes no moving major tag, so this is what moves it).
 #
 # Not covered here: node itself lives in mise.toml's [tools] and the Pages
-# workflow follows it, and the Python side is uv.lock; `mise run
-# deps:outdated` shows both, with the npm packages, in one place.
+# workflow follows it; `mise run deps:outdated` shows it, with the npm and
+# Python packages, in one place.
 version: 2
 updates:
   - package-ecosystem: npm
@@ -25,6 +25,20 @@ updates:
     ignore:
       - dependency-name: typescript
         update-types: ["version-update:semver-major"]
+
+  # pyproject.toml and uv.lock: textual, mcp and the dev/extract extras, plus
+  # everything they pull in. There is no python label in the repo, and these
+  # serve the TUI, the MCP server and the extract alike, so the area is the
+  # dependency policy itself.
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies, "area: tooling"]
+    # One PR for the lockfile, as most bumps are transitive and land together.
+    groups:
+      python:
+        patterns: ["*"]
 
   # The workflows, and the shared setup steps in .github/actions/setup, which
   # hold the setup-uv and mise-action pins.

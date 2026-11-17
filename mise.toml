@@ -17,7 +17,7 @@ typst = "latest"
 # The site's build. The one place its version is set: the Pages workflow
 # installs node through mise from this line, so a bump is this line only.
 # Tracks the newest LTS; `mise run deps:outdated` shows when there is one.
-node = "24"
+node = "26"
 
 # Decompiles the game's .MBIN tables to readable MXML for `mise run extract:all`.
 # Pinned, not "latest": each release targets one game version's struct
@@ -29,7 +29,7 @@ node = "24"
 # of which needed a new one; on build 180836 (7.06) it decompiles every table
 # byte-for-byte the same as the v7.07.0-pre1 pre-release.
 [tools."github:monkeyman192/MBINCompiler"]
-version = "v7.04.1-pre3"
+version = "v7.14.0-pre1"
 asset_pattern = "MBINCompiler-linux"
 bin = "MBINCompiler"
 format = "raw"
