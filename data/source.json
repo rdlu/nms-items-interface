@@ -2,23 +2,23 @@
  "_source": "Where data/items.json and data/recipes.json came from. Written by scripts/build_data.py; do not edit by hand.",
  "counts": {
   "cook": 1323,
-  "items": 1498,
+  "items": 1504,
   "refine": 361
  },
- "extracted": "2026-10-17",
+ "extracted": "2026-11-17",
  "game": {
-  "build": "180836",
-  "gog_build_id": "60091801558572527",
-  "label": "7.06_Cosmos_180836",
-  "paks_dated": "2026-09-30",
-  "update": "Cosmos",
-  "version": "7.06"
+  "build": "185034",
+  "gog_build_id": "60193198099337903",
+  "label": "7.14_Forsaken_185034",
+  "paks_dated": "2026-11-09",
+  "update": "Forsaken",
+  "version": "7.14"
  },
  "source": "game",
- "summary": "Game files, No Man's Sky Cosmos 7.06, build 180836, extracted 2026-10-17",
+ "summary": "Game files, No Man's Sky Forsaken 7.14, build 185034, extracted 2026-11-17",
  "tools": {
-  "MBINCompiler": "7.04.1.3",
-  "MBINCompiler_release": "v7.04.1-pre3",
+  "MBINCompiler": "7.14.0.1",
+  "MBINCompiler_release": "v7.14.0-pre1",
   "hgpaktool": "1.1.3"
  }
 }

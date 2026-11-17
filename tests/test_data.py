@@ -22,7 +22,8 @@ def test_recipe_counts(book: Book) -> None:
     """The guide's totals, as of Cosmos 7.06: 361 refining, 1,323 cooking.
 
     Cosmos added four refiner recipes (357 before), one per new deep-space
-    material: Comet Dust, Contaminated Metal, Gelatinous Fibres and Corrupted
+    material: Comet Dust, Isotopic Dust (Contaminated Metal until
+    Forsaken 7.14), Gelatinous Fibres and Corrupted
     Ichor. Cooking did not change.
     """
     refine = [r for r in book.recipes if r.domain == "refine"]
@@ -104,7 +105,7 @@ def test_twentynine_items_cannot_be_refined_into_existence(book: Book) -> None:
     missing = {book.name(i) for i in inputs - outputs}
     assert len(missing) == 29
     assert {"Living Pearl", "Salvaged Data", "Tainted Metal", "Atlantideum"} <= missing
-    assert {"Comet Dust", "Contaminated Metal", "Gelatinous Fibres", "Corrupted Ichor"} <= missing
+    assert {"Comet Dust", "Isotopic Dust", "Gelatinous Fibres", "Corrupted Ichor"} <= missing
 
 
 def test_plan_from_tier0(book: Book) -> None:
