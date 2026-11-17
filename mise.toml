@@ -17,7 +17,7 @@ typst = "latest"
 # The site's build. The one place its version is set: the Pages workflow
 # installs node through mise from this line, so a bump is this line only.
 # Tracks the newest LTS; `mise run deps:outdated` shows when there is one.
-node = "24"
+node = "26"
 
 # Decompiles the game's .MBIN tables to readable MXML for `mise run extract:all`.
 # Pinned, not "latest": each release targets one game version's struct
